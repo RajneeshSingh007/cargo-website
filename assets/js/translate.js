@@ -28,7 +28,7 @@ var countryList = [
 
 function googleTranslateElementInit2() {
   new google.translate.TranslateElement(
-    { pageLanguage: "en", autoDisplay: false },
+    { pageLanguage: "tr", autoDisplay: false },
     "google_translate_element2"
   );
 }
