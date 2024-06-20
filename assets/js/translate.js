@@ -26,7 +26,14 @@ var countryList = [
   "Ukrainian",
 ];
 
+function setCookie(key, value, expiry) {
+    var expires = new Date();
+      expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
+        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
+        }
+
 function googleTranslateElementInit2() {
+  setCookie('googtrans', '/en/tr',1);
   new google.translate.TranslateElement(
     { pageLanguage: "tr", autoDisplay: false },
     "google_translate_element2"
