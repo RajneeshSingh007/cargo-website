@@ -19,7 +19,3 @@ function getCookie(key) {
     }
     return "";
 }
-
-if (getCookie('googtrans') === "") {
-    setCookie('googtrans', '/en/tr', 7);
-}

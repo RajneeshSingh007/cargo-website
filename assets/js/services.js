@@ -158,4 +158,9 @@ $(document).ready(function () {
     $('.exampleModal').removeClass('exampleModalVisible');
   });
 
+
+  if (getCookie('googtrans') === "") {
+    doGTranslate('tr|tr', this);
+  }
+  
 });
