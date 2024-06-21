@@ -26,16 +26,9 @@ var countryList = [
   "Ukrainian",
 ];
 
-function setCookie(key, value, expiry) {
-    var expires = new Date();
-      expires.setTime(expires.getTime() + (expiry * 24 * 60 * 60 * 1000));
-        document.cookie = key + '=' + value + ';expires=' + expires.toUTCString();
-        }
-
 function googleTranslateElementInit2() {
-  setCookie('googtrans', '/en/tr',1);
   new google.translate.TranslateElement(
-    { pageLanguage: "tr", autoDisplay: false },
+    { pageLanguage: "en", autoDisplay: false },
     "google_translate_element2"
   );
 }
@@ -79,9 +72,9 @@ eval(
 
 $("#selectedCountryImage").attr(
   "src",
-  `assets/images/flags/${flagNameList[2]}.png`
+  `assets/images/flags/${flagNameList[flagNameList.length -2]}.png`
 );
-$("#selectedCountryLang").text(countryList[2]);
+$("#selectedCountryLang").text(countryList[countryList.length - 2]);
 
 function afterTranslate(position) {
   //console.log('pos', countryList[position])
