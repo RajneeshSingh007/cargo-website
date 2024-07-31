@@ -13,6 +13,30 @@ function russianTranslation(lang) {
   // }
 }
 
+
+function turkishTranslation(lang) {
+  if(lang === "Turkish"){
+    $(".menu-item-home").text(`Ana Sayfa`);
+   $(".translate_tpslider__title_1").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
+   $(".translate_tpslider__title_2").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
+   $(".translate_tpslider__title_3").text(`ES21 KARGO ARTIK UÇUŞA HAZIR`);
+   $(".translate_about_title").text(`SINIRLARI ZORLUYORUZ`);
+   $(".translate_tpslider__title-3").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
+   $(".translate_your_subject").attr("placeholder", "KONU");
+
+  }else{
+    $(".menu-item-home").text(`Home`);
+    $(".translate_tpslider__title-1").text(`WE DELIVER CARGO WORLDWIDE`);
+    $(".translate_tpslider__title-2").text(`WE DELIVER CARGO WORLDWIDE`);
+    $(".translate_tpslider__title_3").text(`ES21 CARGO NOW READY FOR FLY`);
+    $(".translate_about_title").text(`BEYOND BOUNDARIES, BEYOND EXPECTATIONS`);
+    $(".translate_your_subject").attr("placeholder", "YOUR SUBJECT");
+
+
+  }
+}
+
+
 var flagNameList = ["ar", "nl", "en", "fr", "de", "it", "ru", "tr", "uk"];
 var countryList = [
   "Arabic",
@@ -85,5 +109,6 @@ function afterTranslate(position) {
   $("#selectedCountryLang").text(countryList[position]);
   $('.exampleModal').removeClass('exampleModalVisible');
   // russianTranslation(countryList[position]);
+  turkishTranslation(countryList[position]);
   localStorage.setItem("lang", countryList[position]);
 }
