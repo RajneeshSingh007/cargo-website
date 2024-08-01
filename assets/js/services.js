@@ -96,7 +96,8 @@ const ServiceList = [
   },
 ];
 
-const Whatsapp_API = "https://t.me/+905363962121";
+const Telegram_API = "https://t.me/+905363962121";
+const Whatsapp_API = "https://wa.me/+905363962121?text=hi";
 const Instagram_API = "https://www.instagram.com/eyyupselvihan?igsh=MWxkdDl5MHIzcmkzaw==";
 
 $(document).ready(function () {
@@ -121,6 +122,9 @@ $(document).ready(function () {
       <img src="assets/images/instagram.png" width="30" height="30"/>
     </a>
     <a target="_blank" class="whatsappUrl" style="margin-top:4px;">
+      <img src="assets/images/whatsapp.png" width="30" height="30"/>
+    </a>
+    <a target="_blank" class="telegramUrl" style="margin-top:4px;">
       <img src="https://w7.pngwing.com/pngs/284/690/png-transparent-telegram-logo-computer-icons-telegram-logo-blue-angle-triangle-thumbnail.png" width="30" height="30"/>
     </a>
   </div>
@@ -131,6 +135,9 @@ $(document).ready(function () {
   });
   $(".instagramUrl").on("click", function () {
     window.location.href = Instagram_API;
+  });
+  $(".telegramUrl").on("click", function () {
+    window.location.href = Telegram_API;
   });
 
   const lang = localStorage.getItem("lang");
