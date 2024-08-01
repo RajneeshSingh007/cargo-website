@@ -96,8 +96,8 @@ const ServiceList = [
   },
 ];
 
-const Whatsapp_API = "https://wa.me/+905359638839?text=hi";
-const Instagram_API = "https://instagram.com/beshtau_kargo?igshid=YmMyMTA2M2Y=";
+const Whatsapp_API = "https://t.me/+905363962121";
+const Instagram_API = "https://www.instagram.com/eyyupselvihan?igsh=MWxkdDl5MHIzcmkzaw==";
 
 $(document).ready(function () {
   if (window.location.href.includes("services-details")) {
@@ -121,7 +121,7 @@ $(document).ready(function () {
       <img src="assets/images/instagram.png" width="30" height="30"/>
     </a>
     <a target="_blank" class="whatsappUrl" style="margin-top:4px;">
-      <img src="assets/images/whatsapp.png" width="30" height="30"/>
+      <img src="https://w7.pngwing.com/pngs/284/690/png-transparent-telegram-logo-computer-icons-telegram-logo-blue-angle-triangle-thumbnail.png" width="30" height="30"/>
     </a>
   </div>
   </div>`);
