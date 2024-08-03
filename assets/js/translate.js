@@ -1,29 +1,12 @@
 function russianTranslation(lang) {
-  // if(lang === "Russian"){
-  //   $(".aboutUsText").text(`Главный офис`);
-  //   $('.russianSafeShippingDesc').text(`В рамках безопасных международных грузоперевозок; все ваши вещи, сувениры, посылки, документы, экспортные товары доставят быстро и безопасно в нужную вам точку в нужной вам стране.`);
-  //   $('.aboutText').text(`ПРО НАС`);
-  //   $('.branchText').text(`ФИЛИАЛЫ`);
-  // }else{
-  //   $(".aboutUsText").text('Head Office');
-  //   $('.russianSafeShippingDesc').text(`Within the scope of Secure International Cargo Shipping; all your belongings, souvenirs, parcels, products, documents, export goods are
-  //   delivered quickly and safely to the point you want in the country you want.`);
-  //   $('.aboutText').text(`About Us`);
-  //   $('.branchText').text(`Branches`);
-  // }
-}
-
-
-function turkishTranslation(lang) {
   if(lang === "Turkish"){
-    $(".menu-item-home").text(`Ana Sayfa`);
+   $(".menu-item-home").text(`Ana Sayfa`);
    $(".translate_tpslider__title_1").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
    $(".translate_tpslider__title_2").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
    $(".translate_tpslider__title_3").text(`ES21 KARGO ARTIK UÇUŞA HAZIR`);
    $(".translate_about_title").text(`SINIRLARI ZORLUYORUZ`);
    $(".translate_tpslider__title-3").text(`DÜNYANIN HER YERİNE KARGO GÖNDERİYORUZ`);
    $(".translate_your_subject").attr("placeholder", "KONU");
-
   }else{
     $(".menu-item-home").text(`Home`);
     $(".translate_tpslider__title-1").text(`WE DELIVER CARGO WORLDWIDE`);
@@ -31,8 +14,6 @@ function turkishTranslation(lang) {
     $(".translate_tpslider__title_3").text(`ES21 CARGO NOW READY FOR FLY`);
     $(".translate_about_title").text(`BEYOND BOUNDARIES, BEYOND EXPECTATIONS`);
     $(".translate_your_subject").attr("placeholder", "YOUR SUBJECT");
-
-
   }
 }
 
@@ -101,14 +82,12 @@ $("#selectedCountryImage").attr(
 $("#selectedCountryLang").text(countryList[countryList.length - 2]);
 
 function afterTranslate(position) {
-  //console.log('pos', countryList[position])
   $("#selectedCountryImage").attr(
     "src",
     `assets/images/flags/${flagNameList[position]}.png`
   );
   $("#selectedCountryLang").text(countryList[position]);
   $('.exampleModal').removeClass('exampleModalVisible');
-  // russianTranslation(countryList[position]);
-  turkishTranslation(countryList[position]);
+  russianTranslation(countryList[position]);
   localStorage.setItem("lang", countryList[position]);
 }

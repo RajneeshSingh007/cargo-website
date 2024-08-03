@@ -142,7 +142,7 @@ $(document).ready(function () {
 
   const lang = localStorage.getItem("lang");
 
-  if (lang !== undefined && lang !== null && lang.length > 0) {
+  if (lang !== undefined && lang !== null && String(lang) !== 'undefined' && lang.length > 0) {
     const pos = countryList.findIndex(
       (country) => country.toLowerCase() === lang.toLowerCase()
     );
@@ -150,7 +150,8 @@ $(document).ready(function () {
       afterTranslate(pos);
     }
   } else {
-    russianTranslation("");
+    doGTranslate('tr|tr', this);
+    afterTranslate(countryList.length - 2);
   }
 
   $('#langDiv').click(function(e) {  
@@ -165,9 +166,4 @@ $(document).ready(function () {
     $('.exampleModal').removeClass('exampleModalVisible');
   });
 
-
-  if (getCookie('googtrans') === "") {
-    doGTranslate('tr|tr', this);
-  }
-  
 });
