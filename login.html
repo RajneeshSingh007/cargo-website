@@ -24,6 +24,7 @@
    <link rel="stylesheet" href="assets/css/spacing.css">
    <link rel="stylesheet" href="assets/css/main.css">
    <link rel="stylesheet" href="assets/css/translate.css">
+   <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
 
    <!-- Tag manager -->
    <script async src="https://www.googletagmanager.com/gtag/js?id="></script>
@@ -187,7 +188,7 @@
                                        <li><a href="services.html">Services</a></li>
                                        <li><a href="branches.html">Branches</a></li>
                                        <li><a href="gallery.html">Gallery</a></li>
-                                       <li><a href="contact.html">Contact Us</a></li>
+                                       <li><a href="contact.html">Contact Us</a></li><li><a href="login.html">Cargo Tracking</a></li>
                                     </ul>
                                  </nav> 
                               </div>
@@ -286,25 +287,25 @@
          <div class="row justify-content-center">
             <div class="col-xl-6 col-lg-8 col-sm-10 col-md-10">
                <div class="contact-page__comment-form card p-4 shadow-sm">
-                  <p class="text-center tp-section__subtitle">Customer Login<p>
-                  <form action="#">
+                  <p id="customer-login-title" class="text-center tp-section__subtitle">Customer Login<p>
+                  <form id="loginForm" action="#">
                      <div class="row">
                         <div class="contact-page__comment-input">
-                            <label for="customerCode" class="form-label">Customer Code</label>
-                            <input id="customerCode" name="code" type="text" placeholder="">
+                            <label id="label-customerCode"  for="customerCode" class="form-label">Customer Code</label>
+                            <input id="customerCode" name="musteri_kodu" type="text" placeholder="">
                        </div>
                        <div class="contact-page__comment-input">
-                            <label for="password" class="form-label">Password</label>
-                            <input id="password" name="password" type="password" placeholder="">
+                            <label id="label-password" for="password" class="form-label">Password</label>
+                            <input id="password" name="kabul_no" type="text" placeholder="" oninput="validateNumberInput(this)">
                         </div>
-                        <label class="form-label">Choose Language</label>
+                        <label class="form-label"  id="label-language">Choose Language</label>
                         <div class="d-flex flex-wrap align-items-center gap-2">
                                 <div class="form-check">
                                     <input name="language" type="radio" value="tr">
                                     <label for="tr" class="form-label">Türkçe</label>
                                 </div>
                                 <div class="form-check">
-                                    <input name="language" type="radio" value="en">
+                                    <input name="language" type="radio" value="en" checked>
                                     <label for="en" class="form-label">English</label>
                                 </div>
                                 <div class="form-check">
@@ -449,7 +450,6 @@
    <script src="assets/js/swiper-bundle.js"></script>
    <script src="assets/js/nouislider.js"></script>
    <script src="assets/js/magnific-popup.js"></script>
-   <script src="assets/js/parallax.html"></script>
    <script src="assets/js/jquery-ui.js"></script>
    <script src="assets/js/jarallax.js"></script>
    <script src="assets/js/nice-select.js"></script>
@@ -460,7 +460,8 @@
    <script src="assets/js/imagesloaded-pkgd.js"></script>
    <script src="assets/js/ajax-form.js"></script>
    <script src="assets/js/main.js"></script>
-   <!-- <script src="assets/js/translate.js"></script> -->
+   <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+   <script src="assets/js/tracking.js"></script>
 </body>
 
 
